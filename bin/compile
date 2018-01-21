@@ -99,6 +99,7 @@ cat > ${BUILD_DIR}/tor/bin/${RUN_COMMAND} <<EOF
 #!/usr/bin/env bash
 
 mkdir -p "${HOME}/hidden_service"
+chmod 700 "${HOME}/hidden_service"
 
 echo "Setting up hidden service"
 cat > ${HOME}/hidden_service/private_key <<EPK
