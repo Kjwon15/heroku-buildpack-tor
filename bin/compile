@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
+
+## Get latest tor version
+
+TOR_VER=$(wget -qO- https://dist.torproject.org/ | grep -oE 'tor-[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\.tar.gz' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | sort -g | tail -n1)
+
 ## VARIABLES
 RUN_COMMAND=run_tor
-TOR_VER=0.3.0.10
 TOR_SRC_NAME=tor-${TOR_VER}.tar.gz
-TOR_DIST_URL=https://www.torproject.org/dist/
+TOR_DIST_URL=https://dist.torproject.org/
 
 
 ## --
