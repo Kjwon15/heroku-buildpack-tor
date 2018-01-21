@@ -13,8 +13,6 @@ TOR_DIST_URL=https://dist.torproject.org/
 
 ## --
 
-set -x
-
 indent() {
     sed -u 's/^/      /'
 }
