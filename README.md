@@ -9,7 +9,7 @@ Create a Heroku app as normal, with any buildpacks you typically use.
 Then:
 
 ```bash
-$ heroku buildpacks:add https://github.com/hernanex3/heroku-buildpack-tor.git
+$ heroku buildpacks:add https://github.com/Kjwon15/heroku-buildpack-tor.git
 ```
 
 With the buildpack installed, you'll need to modify your Procfile such that
@@ -40,6 +40,6 @@ SHA, for the .onion name. You'll need to provide these as env vars:
 
 ## Features
 
+* Install latest version
 * Verifies integrity (see yourself how its done, I'm not sure its correct)
 * Caches compilation
-* I'm using it in my [blog](http://hernanex3.com)
