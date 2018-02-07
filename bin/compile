@@ -107,6 +107,9 @@ cat | sed -e 's/\\\\n/\\n/g' > ${HOME}/hidden_service/private_key <<EPK
 EPK
 echo \${HIDDEN_DOT_ONION} > ${HOME}/hidden_service/hostname
 
+unset HIDDEN_DOT_ONION
+unset HIDDEN_PRIVATE_KEY
+
 echo "HiddenServiceDir ${HOME}/hidden_service/" > $HOME/tor/etc/tor/torrc
 echo "HiddenServicePort 80 127.0.0.1:\${PORT}" >> $HOME/tor/etc/tor/torrc
 
