@@ -102,7 +102,7 @@ mkdir -p "${HOME}/hidden_service"
 chmod 700 "${HOME}/hidden_service"
 
 echo "Setting up hidden service"
-cat > ${HOME}/hidden_service/private_key <<EPK
+cat | sed -e 's/\\\\n/\\n/g' > ${HOME}/hidden_service/private_key <<EPK
 \${HIDDEN_PRIVATE_KEY}
 EPK
 echo \${HIDDEN_DOT_ONION} > ${HOME}/hidden_service/hostname
